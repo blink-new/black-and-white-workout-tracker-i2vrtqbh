@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import DashboardPage from "@/pages/DashboardPage";
+import LogWorkoutPage from "@/pages/LogWorkoutPage";
 
 // Placeholder pages for now
 const PlaceholderPage = ({ title }: { title: string }) => (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<DashboardPage />} />
+          <Route path="/log-workout" element={<LogWorkoutPage />} />
           <Route path="/history" element={<PlaceholderPage title="Workout History" />} />
           <Route path="/exercises" element={<PlaceholderPage title="Manage Exercises" />} />
           {/* Add a catch-all for any other routes to redirect to dashboard */}
